@@ -1,0 +1,218 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Research Dash Board</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Open+Sans" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js"></script>
+    <script src="js/graphs.js"></script>
+</head>
+
+<body>
+    <!-- navigation -->
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Contact Info</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Add Patient</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Notify</a></li>
+    </ul>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper" id="topNav">
+                <a class="btn-floating btn-large grey lighten-3" id="toggleSideNav">
+                    <i class="material-icons">menu</i></a>
+                <!-- <a href="#!" id="nav-logo" >Mood ToolKit</a> -->
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="study.html">Study</a></li>
+                    <li><a href="badges.html">About</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Profile<i class="material-icons right">person_pin</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- end navigation -->
+    <!--sidebar -->
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="userView">
+                <img class="background" src="images/office.jpg">
+                <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+                <a href="#!name"><span class="white-text name">John Doe</span></a>
+                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"></a>
+
+    <!-- page content -->
+    <div class="row profile">
+        <div class="col s8"></div>
+        <div class="col s2 left">
+            <h4>John Apple</h4>
+            <small><i>Columbia, MO</i></small>
+            <p>
+                email@study.com
+                <br />
+                <br /> June 02, 1988</p>
+            <!-- Split button -->
+            <div class="btn-group">
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
+                    <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </div>
+        <div class=" col s2 ">
+            <img src="propic.jpg" alt="" class="img-circle" />
+        </div>
+    </div>
+
+   <div class="row ">
+
+      <div class="col s3">
+         <div class = "study-stats" >
+            <table class="highlight bordered">
+              <thead >
+                <tr>
+                    <th data-field="id">Start Date</th>
+                    <th data-field="name">Finish Date</th>
+                    <th data-field="price">Days Complete</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Oct 1, 2016</td>
+                  <td>Oct 20, 2016</td>
+                  <td>12</td>
+                </tr>
+              </tbody>
+            </table>
+         </div>
+         <div class = "study-stats" >
+            <table class="highlight bordered">
+              <thead >
+                <tr>
+                    <th data-field="id">Surveys Completed</th>
+                    <th data-field="name">Hours of Data</th>
+                    <th data-field="price">Hours/Day</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>80</td>
+                  <td>185</td>
+                  <td>15.41</td>
+                </tr>
+              </tbody>
+            </table>
+         </div>
+      </div>
+      <div class ="col s9" id = "study-progress"></div>
+   </div>
+
+
+
+
+
+
+    <!--        <div class="row">
+         <div class="col s5" class="col-content" id = "patient-stats">
+
+                 <table class="highlight bordered">
+           <thead >
+             <tr>
+                 <th data-field="id">Name</th>
+                 <th data-field="name">Item Name</th>
+                 <th data-field="price">Item Price</th>
+             </tr>
+           </thead>
+
+           <tbody>
+             <tr>
+               <td>Alvin</td>
+               <td>Eclair</td>
+               <td>$0.87</td>
+             </tr>
+             <tr>
+               <td>Alan</td>
+               <td>Jellybean</td>
+               <td>$3.76</td>
+             </tr>
+             <tr>
+               <td>Jonathan</td>
+               <td>Lollipop</td>
+               <td>$7.00</td>
+             </tr>
+           </tbody>
+         </table>
+         </div> -->
+    <div class="row">
+        <div class="col s5" >
+           <div id="activity-pie-chart" class = "pie-charts">
+               <!-- Survey response breakdown goes here -->
+           </div>
+           <div id="compliance-pie-chart" class = "pie-charts">
+               <!-- Survey response breakdown goes here -->
+           </div>
+
+         </div>
+        <div class="col s7" id="phisdata">
+            <!-- Body sensor displays go here  -->
+        </div>
+    </div>
+    <!-- end page content -->
+</body>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2016 Mood ToolKit
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>
+
+</html>
