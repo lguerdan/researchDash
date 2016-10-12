@@ -1,5 +1,5 @@
 @import 'https://code.highcharts.com/css/highcharts.css';
-@import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
+@import "https://fonts.googleapis.com/css?family=Montserrat";
 
 * {
    font-family: 'Open Sans', sans-serif;
@@ -28,6 +28,14 @@ hr{
    line-height: 1px;
 }
 
+.section-header{
+   font-family: 'Montserrat', sans-serif;
+   margin-bottom: 10px;
+   font-weight: 10px;
+   padding-left: 25px;
+   color: #454545;
+}
+
 #nav-logo{
    font-style: bold;
    font-weight: 20px
@@ -35,6 +43,21 @@ hr{
 #toggleSideNav{
    margin-right: 10px;
    color: #454545 !important;
+}
+
+.p-icon{
+   margin: 0 5px 0 5px;
+   color: #dd616e;
+}
+
+#profile-actions{
+   position: relative;
+   margin-top: 18%;
+   margin-left: 75%;
+}
+
+.btn-floating{
+   margin-left: 12px;
 }
 
 .header{
@@ -47,7 +70,6 @@ hr{
 .profile{
    background-color: #F2F2F2;
    /*background-image: url('mizzou.png');*/
-
 }
 .img-circle {
     border-radius: 50%;
@@ -56,7 +78,7 @@ hr{
 
 .row{
    padding: 10px 10px;
-   margin-bottom: 30px;
+   margin-bottom: 10px;
 }
 .chart {
     min-width: 320px;
@@ -93,6 +115,11 @@ footer.page-footer{
    margin: 0 2% 0 2%;
    background-color: #f9f8f8;
 }
+
+.i-card{
+   color: #878E99;
+}
+
 #card1{
    background-color: #E5B34E;
 }
@@ -123,7 +150,10 @@ footer.page-footer{
   border: solid 1.5px #dd616e;
   background-color: #f9f8f8;
   padding: 5px;
+  margin-top: 30px;
 }
+
+
 
 .t-icon{
    margin: 0 5px 0 5px;

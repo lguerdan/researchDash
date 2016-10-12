@@ -46,6 +46,8 @@
             </div>
         </nav>
     </div>
+
+
     <!-- end navigation -->
     <!--sidebar -->
     <ul id="slide-out" class="side-nav">
@@ -70,10 +72,10 @@
     <!-- page content -->
     <div class="row profile">
         <div class="col s8">
-            <div id = "actions">
-               <i class="material-icons t-icon">alarm_on</i>
-               <i class="material-icons t-icon">get_app</i>
-               <i class="material-icons t-icon">settings</i>
+            <div id = "profile-actions">
+               <a class="btn-floating  btn-large waves-effect waves-light teal"><i class="material-icons">alarm_on</i></a>
+               <a class="btn-floating  btn-large waves-effect waves-light red"><i class="material-icons">get_app</i></a>
+               <a class="btn-floating  btn-large waves-effect waves-light orange"><i class="material-icons">settings</i></a>
             </div>
         </div>
         <div class="col s2 left">
@@ -97,11 +99,10 @@
             <img src="propic.jpg" alt="" class="img-circle" />
         </div>
     </div>
-
    <div class="row ">
-
+      <div class="col s12">
       <div class="col s3">
-         <div class = "study-stats" >
+         <div class = "study-module">
             <table class="highlight bordered">
               <thead >
                 <tr>
@@ -120,7 +121,7 @@
               </tbody>
             </table>
          </div>
-         <div class = "study-stats" >
+         <div class = "study-module">
             <table class="highlight bordered">
               <thead >
                 <tr>
@@ -140,56 +141,21 @@
             </table>
          </div>
       </div>
-      <div class ="col s9" id = "study-progress"></div>
+      <div class ="col s9 study-module" id = "study-progress"></div>
+      </div>
    </div>
 
-
-
-
-
-
-    <!--        <div class="row">
-         <div class="col s5" class="col-content" id = "patient-stats">
-
-                 <table class="highlight bordered">
-           <thead >
-             <tr>
-                 <th data-field="id">Name</th>
-                 <th data-field="name">Item Name</th>
-                 <th data-field="price">Item Price</th>
-             </tr>
-           </thead>
-
-           <tbody>
-             <tr>
-               <td>Alvin</td>
-               <td>Eclair</td>
-               <td>$0.87</td>
-             </tr>
-             <tr>
-               <td>Alan</td>
-               <td>Jellybean</td>
-               <td>$3.76</td>
-             </tr>
-             <tr>
-               <td>Jonathan</td>
-               <td>Lollipop</td>
-               <td>$7.00</td>
-             </tr>
-           </tbody>
-         </table>
-         </div> -->
     <div class="row">
-        <div class="col s5" >
-           <div id="activity-pie-chart" class = "pie-charts">
+        <div class="col s5 " >
+           <div id="activity-pie-chart" class = "pie-charts study-module">
                <!-- Survey response breakdown goes here -->
            </div>
-           <div id="compliance-pie-chart" class = "pie-charts">
+           <div id="compliance-pie-chart" class = "pie-charts study-module">
                <!-- Survey response breakdown goes here -->
            </div>
 
          </div>
-        <div class="col s7" id="phisdata">
+        <div class="col s7 study-module" id="phisdata">
             <!-- Body sensor displays go here  -->
         </div>
     </div>
@@ -199,16 +165,16 @@
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <h5 class="white-text">Mood ToolKit</h5>
+                <p class="grey-text text-lighten-4">Mood ToolKit is a collaberative effort between the University of Missouri Computer Science and Psychology departments. It can be used to build re-configurable surveys and data processing for mobile-based studies. </p>
             </div>
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">University of Missouri</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Related Work</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Resources</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">IP Rights</a></li>
                 </ul>
             </div>
         </div>
@@ -216,7 +182,7 @@
     <div class="footer-copyright">
         <div class="container">
             © 2016 Mood ToolKit
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <a class="grey-text text-lighten-4 right" href="#!">Read More</a>
         </div>
     </div>
 </footer>
