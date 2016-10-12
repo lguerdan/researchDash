@@ -7,6 +7,10 @@ $(document).ready(function(){
 
    });
 
+   $("#table tr").click(function() {
+      var selected = $(this);
+      window.location.href='user.html';
+   });
 
 });
 

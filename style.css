@@ -4,9 +4,6 @@
 * {
    font-family: 'Open Sans', sans-serif;
 }
-main{
-  padding-left: 300px;
-}
 
 a{
    color: #454545;
@@ -80,7 +77,6 @@ hr{
    margin-bottom: 25px;
 }
 
-
 footer.page-footer{
    background-color: #b3aee5;
 }
@@ -121,250 +117,109 @@ footer.page-footer{
    border-radius: 10px;
 }
 
-
 /*---- Table Style & Formatting*/
-
-@table-header-font-weight:      400;
-@table-header-font-color:       #757575;
-
-@table-cell-padding:            1.6rem;
-@table-condensed-cell-padding:  @table-cell-padding/2;
-
-
-@table-bg:                      #fff;
-@table-bg-accent:               #f5f5f5;
-@table-bg-hover:                rgba(0,0,0,.12);
-@table-bg-active:               @table-bg-hover;
-@table-border-color:            #e0e0e0;
-
-
-
-// Mixins
-// -----------------
-.transition(@transition) {
-  -webkit-transition: @transition;
-       -o-transition: @transition;
-          transition: @transition;
+.study-module{
+  border-radius: 8px;
+  border: solid 1.5px #dd616e;
+  background-color: #f9f8f8;
+  padding: 5px;
 }
 
-// Tables
-//
-// -----------------
+.t-icon{
+   margin: 0 5px 0 5px;
+   color: #dd616e;
+}
 
-// Baseline styles
+td{
+   color: #454545;
+}
+
+.shadow-z-1 {
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+
+}
+
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 2rem;
-  background-color: @table-bg;
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      .transition(all .3s ease);
-      > th,
-      > td {
-        text-align: left;
-        padding: @table-cell-padding;
-        vertical-align: top;
-        border-top: 0;
-        .transition(all .3s ease);
-      }
-    }
-  }
-  > thead > tr > th {
-    font-weight: @table-header-font-weight;
-    color: @table-header-font-color;
-    vertical-align: bottom;
-    border-bottom: 1px solid rgba(0,0,0,.12);
-  }
-  > caption + thead,
-  > colgroup + thead,
-  > thead:first-child {
-    > tr:first-child {
-      > th,
-      > td {
-        border-top: 0;
-      }
-    }
-  }
-  > tbody + tbody {
-    border-top: 1px solid rgba(0,0,0,.12);
-  }
-
-  // Nesting
-  .table {
-    background-color: @table-bg;
-  }
-
-  // Remove border
-  .no-border {
-    border: 0;
-  }
+  background-color: #f9f8f8;
+  color: #454545;
 }
-
-// Condensed table w/ half padding
-.table-condensed {
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        padding: @table-condensed-cell-padding;
-      }
-    }
-  }
+.table > thead > tr,
+.table > tbody > tr,
+.table > tfoot > tr {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-
-
-// Bordered version
-//
-// Add horizontal borders between columns.
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  text-align: left;
+  padding: 1.6rem;
+  vertical-align: top;
+  border-top: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.table > thead > tr > th {
+  font-weight: 400;
+  color: #757575;
+  vertical-align: bottom;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+.table > tbody + tbody {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.table .table {
+  background-color: #ffffff;
+}
+.table .no-border {
+  border: 0;
+}
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+  padding: 0.8rem;
+}
 .table-bordered {
   border: 0;
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        border: 0;
-        border-bottom: 1px solid @table-border-color;
-      }
-    }
-  }
-  > thead > tr {
-    > th,
-    > td {
-      border-bottom-width: 2px;
-    }
-  }
 }
-
-
-// Zebra-striping
-//
-// Default zebra-stripe styles (alternating gray and transparent backgrounds)
-.table-striped {
-  > tbody > tr:nth-child(odd) {
-    > td,
-    > th {
-      background-color: @table-bg-accent;
-    }
-  }
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
 }
-
-// Hover effect
-//
-.table-hover {
-  > tbody > tr:hover {
-    > td,
-    > th {
-      background-color: @table-bg-hover;
-    }
-  }
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom-width: 2px;
 }
-
-// Responsive tables (vertical)
-//
-// Wrap your tables in `.table-responsive-vertical` and we'll make them mobile friendly
-// by vertical table-cell display. Only applies <768px. Everything above that will display normally.
-// For correct display you must add 'data-title' to each 'td'
-.table-responsive-vertical {
-
-  @media screen and (max-width: 768px) {
-
-    // Tighten up spacing
-    > .table {
-      margin-bottom: 0;
-      background-color: transparent;
-      > thead,
-      > tfoot {
-        display: none;
-      }
-
-      > tbody {
-        display: block;
-
-        > tr {
-          display: block;
-          border: 1px solid @table-border-color;
-          border-radius: 2px;
-          margin-bottom: @table-cell-padding;
-
-          > td {
-            background-color: @table-bg;
-            display: block;
-            vertical-align: middle;
-            text-align: right;
-          }
-          > td[data-title]:before {
-            content: attr(data-title);
-            float: left;
-            font-size: inherit;
-            font-weight: @table-header-font-weight;
-            color: @table-header-font-color;
-          }
-        }
-      }
-    }
-
-    // Special overrides for shadows
-    &.shadow-z-1 {
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none;
-      > .table > tbody > tr {
-        border: none;
-        .shadow-z-1();
-      }
-    }
-
-    // Special overrides for the bordered tables
-    > .table-bordered {
-      border: 0;
-
-      // Nuke the appropriate borders so that the parent can handle them
-      > tbody {
-        > tr {
-          > td {
-            border: 0;
-            border-bottom: 1px solid @table-border-color;
-          }
-          > td:last-child {
-            border-bottom: 0;
-          }
-        }
-      }
-    }
-
-    // Special overrides for the striped tables
-    > .table-striped {
-      > tbody > tr > td,
-      > tbody > tr:nth-child(odd) {
-          background-color: @table-bg;
-      }
-      > tbody > tr > td:nth-child(odd) {
-          background-color: @table-bg-accent;
-      }
-    }
-
-    // Special overrides for hover tables
-    > .table-hover {
-      > tbody {
-        > tr:hover > td,
-        > tr:hover {
-          background-color: @table-bg;
-        }
-        > tr > td:hover {
-          background-color: @table-bg-hover;
-        }
-      }
-    }
-  }
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #f5f5f5;
 }
-
-
-
-
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background-color: rgba(0, 0, 0, 0.12);
+}
